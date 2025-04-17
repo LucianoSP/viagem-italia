@@ -1,0 +1,549 @@
+/* Estilos gerais */
+:root {
+    --primary-color: #1a5276;
+    --secondary-color: #f39c12;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --background-color: #f8f9fa;
+    --card-color: #fff;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.5em;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+ul {
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* Header */
+header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1516483638261-f4dbaf036963?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.header-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    color: var(--light-color);
+}
+
+/* Navegação */
+#navbar {
+    background-color: var(--primary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: var(--shadow);
+}
+
+#navbar ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#navbar li {
+    margin: 0;
+}
+
+#navbar a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+#navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Seções */
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--primary-color);
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: var(--secondary-color);
+}
+
+/* Cards de informação */
+.info-card {
+    display: flex;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2rem;
+}
+
+.info-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.info-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Timeline */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.timeline::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: var(--primary-color);
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    margin-left: -3px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.timeline-date {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    top: 15px;
+    left: 15px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+.timeline-date .day {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
+.timeline-date .month {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+}
+
+.timeline-content {
+    padding: 20px 30px;
+    background-color: var(--card-color);
+    position: relative;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-left: 60px;
+}
+
+.timeline-content h3 {
+    color: var(--primary-color);
+}
+
+.pernoite {
+    margin-top: 10px;
+    font-style: italic;
+    color: var(--dark-color);
+}
+
+/* Hospedagens */
+.city-section {
+    margin-bottom: 40px;
+}
+
+.city-section h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.hotel-category {
+    margin-bottom: 30px;
+}
+
+.hotel-category h4 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.hotel-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin-bottom: 15px;
+}
+
+.hotel-card h5 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Gastronomia */
+.region-section {
+    margin-bottom: 40px;
+}
+
+.region-section h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.food-category {
+    margin-bottom: 30px;
+}
+
+.food-category h4 {
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.food-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.food-item {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.food-item h5 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Atrações */
+.attractions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.attraction-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.attraction-header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 20px;
+}
+
+.attraction-header h3 {
+    color: white;
+    margin: 0;
+}
+
+.attraction-content {
+    padding: 20px;
+}
+
+.attraction-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.attraction-content li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.attraction-content li::before {
+    content: '•';
+    color: var(--secondary-color);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+/* Distâncias e Tempos */
+.distances-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.distances-card {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.distances-card h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.distances-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.distances-table th, .distances-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.distances-table th {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+.driving-notes {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 20px;
+}
+
+.driving-notes h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+/* Dicas Práticas */
+.tips-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.tip-card {
+    display: flex;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    height: 100%;
+}
+
+.tip-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 2rem;
+}
+
+.tip-content {
+    padding: 20px;
+    flex: 1;
+}
+
+.tip-content h3 {
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+/* Conclusão */
+.conclusion {
+    text-align: center;
+    padding: 40px 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.final-message {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--dark-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        padding: 60px 20px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .info-card {
+        flex-direction: column;
+    }
+    
+    .info-icon {
+        width: 100%;
+        padding: 15px 0;
+    }
+    
+    .timeline::after {
+        left: 31px;
+    }
+    
+    .timeline-date {
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+    
+    .timeline-content {
+        margin-left: 40px;
+    }
+    
+    .attractions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .tip-card {
+        flex-direction: column;
+    }
+    
+    .tip-icon {
+        width: 100%;
+        padding: 15px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar ul {
+        flex-direction: column;
+    }
+    
+    .food-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .distances-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .tips-container {
+        grid-template-columns: 1fr;
+    }
+}
